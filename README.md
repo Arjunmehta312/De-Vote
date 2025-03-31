@@ -1,6 +1,6 @@
 # Decentralized Blockchain Voting System
 
-A Java-based implementation of a decentralized voting system using blockchain technology. This project demonstrates secure, transparent, and tamper-proof electronic voting.
+A Java-based implementation of a decentralized voting system using blockchain technology. This project demonstrates secure, transparent, and tamper-proof electronic voting with an interactive user interface.
 
 ## Project Overview
 
@@ -10,6 +10,7 @@ This blockchain-based system provides:
 - Prevention of double-voting through blockchain verification
 - Transparent and auditable election results
 - Digital signature verification for vote authenticity
+- Interactive user interface for voter registration and voting
 
 ## Features
 
@@ -19,6 +20,8 @@ This blockchain-based system provides:
 - **Transparent Vote Counting**: All votes are publicly verifiable while maintaining voter privacy
 - **Chain Validation**: Full blockchain verification before result tabulation
 - **Block Confirmations**: Simulated network consensus for transaction validation
+- **Interactive Interface**: Console-based menu system for voter registration and vote casting
+- **Voter Registry**: Secure storage of voter identities linked to blockchain addresses
 
 ## Classes
 
@@ -41,12 +44,11 @@ This blockchain-based system provides:
 - Provides transparent result tabulation
 
 ### OOP_Project
-- Demonstrates the system's functionality
-- Creates voter identities with blockchain wallets
-- Deploys an election smart contract
-- Records votes as blockchain transactions
-- Shows double-voting prevention
-- Displays blockchain transaction details and verification
+- Implements interactive console interface with a menu system
+- Allows users to register as voters with unique blockchain identities
+- Provides interface for casting votes on the blockchain
+- Displays election results and registered voters
+- Manages the voter registry and block confirmations
 
 ## Running the Application
 
@@ -65,6 +67,14 @@ cd /path/to/OOP_Project
 ant run
 ```
 
+### User Interface Guide
+When running the application, you'll see a menu with these options:
+1. **Register as a voter** - Create a new voter identity with a blockchain address
+2. **Cast a vote** - Submit a vote for your preferred candidate
+3. **Display election results** - View current election results with blockchain verification
+4. **Display all voters** - List all registered voters and their blockchain details
+5. **Exit** - Close the application
+
 ## Technical Details
 
 - **Cryptography**: RSA-2048 key pairs for digital signatures
@@ -72,6 +82,7 @@ ant run
 - **Block Structure**: Includes transaction data, signatures, timestamps, and previous block references
 - **Consensus**: Simulated block confirmations
 - **Authentication**: Public key infrastructure for voter verification
+- **User Interface**: Interactive console application with menu system
 
 ## Future Enhancements
 
@@ -81,6 +92,8 @@ ant run
 - Zero-knowledge proofs for enhanced voter privacy
 - Mobile wallet support for voter authentication
 - Multi-signature support for election administration
+- Web-based user interface
+- QR code generation for blockchain addresses
 
 ## License
 
