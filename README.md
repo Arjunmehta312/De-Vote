@@ -216,4 +216,3 @@ The project implements a simplified blockchain with these key components:
 - Real-time result monitoring dashboard
 - Audit trail and transparent logging system
 - Cross-chain interoperability for larger elections
-- Hardware security module (HSM) integration
