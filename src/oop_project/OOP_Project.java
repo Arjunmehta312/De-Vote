@@ -20,13 +20,9 @@ public class OOP_Project {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("========= Decentralized Blockchain Voting System =========");
-        System.out.println("Initializing blockchain network...");
+        System.out.println("Initializing Blockchain Voting System...");
         
         // Create election with candidates
-        System.out.println("\n--- Creating election smart contract on blockchain ---");
         List<String> candidates = new ArrayList<>();
         candidates.add("Candidate A");
         candidates.add("Candidate B");
@@ -34,50 +30,11 @@ public class OOP_Project {
         
         Election election = new Election(101, "Presidential Election", candidates);
         
-        // Create voter registry (simulating a blockchain-based identity system)
-        Map<String, Voter> voterRegistry = new HashMap<>();
+        // Create and show Swing UI
+        SwingVotingUI ui = new SwingVotingUI(election);
+        ui.setVisible(true);
         
-        boolean running = true;
-        while (running) {
-            System.out.println("\n========= Blockchain Voting System Menu =========");
-            System.out.println("1. Register as a voter");
-            System.out.println("2. Cast a vote");
-            System.out.println("3. Display election results");
-            System.out.println("4. Display all voters");
-            System.out.println("5. Exit");
-            System.out.print("Enter your choice (1-5): ");
-            
-            int choice = 0;
-            try {
-                choice = Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Invalid input. Please enter a number between 1 and 5.");
-                continue;
-            }
-            
-            switch (choice) {
-                case 1:
-                    registerVoter(scanner, voterRegistry);
-                    break;
-                case 2:
-                    castVote(scanner, voterRegistry, election);
-                    break;
-                case 3:
-                    election.displayResults();
-                    break;
-                case 4:
-                    displayAllVoters(voterRegistry);
-                    break;
-                case 5:
-                    running = false;
-                    System.out.println("Thank you for using the Decentralized Blockchain Voting System!");
-                    break;
-                default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 5.");
-            }
-        }
-        
-        scanner.close();
+        // Previous console-based code is now replaced by the GUI
     }
     
     // Method to register a new voter
